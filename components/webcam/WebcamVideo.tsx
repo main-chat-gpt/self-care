@@ -75,7 +75,6 @@ export default function WebcamVideo({user}: Props) {
             const url = URL.createObjectURL(blob);
             const a = document.createElement("a");
             document.body.appendChild(a);
-            a.style = "display: none";
             a.href = url;
             a.download = "react-webcam-stream-capture.webm";
             a.click();
