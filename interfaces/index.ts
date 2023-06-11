@@ -23,8 +23,8 @@ export type Lesson = {
 }
 
 export type UserLesson = {
-  userId: number;
-  lessonId: number;
+  userId: string;
+  lessonId: string;
   userName: string;
   lessonName: string;
 }

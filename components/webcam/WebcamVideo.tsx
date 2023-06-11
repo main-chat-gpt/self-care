@@ -7,7 +7,7 @@ type Props = {
     user: UserLesson;
 }
 
-const uploadByteArray = async (recordedChunks, user) => {
+const uploadByteArray = async (recordedChunks, user: UserLesson) => {
     try {
         const response = await fetch('https://shparuta-cache.onrender.com/api/cache/save-lesson', {
             method: 'POST',
@@ -15,8 +15,8 @@ const uploadByteArray = async (recordedChunks, user) => {
             headers: {
                 'Content-Type': 'application/octet-stream',
                 'fileName': new Date().toISOString().replaceAll(":", "-").substring(0, 19),
-                'userId': user.userId + "",
-                'userLessonId': user.lessonId + ""
+                'userId': user.userId,
+                'userLessonId': user.lessonId
             },
         });
 
